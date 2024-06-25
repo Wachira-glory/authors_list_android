@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,51 +13,54 @@
             android:id="@+id/ivAvatar"
             android:layout_width="47dp"
             android:layout_height="54dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.118"
+            app:layout_constraintHorizontal_bias="0.155"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.023"
             app:srcCompat="@drawable/person_svgrepo_com" />
 
         <TextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
+            android:layout_marginStart="116dp"
             android:layout_marginTop="12dp"
-            android:text="Trevor Noah"
             app:layout_constraintStart_toEndOf="@+id/ivAvatar"
-            app:layout_constraintTop_toTopOf="@+id/ivAvatar" />
+            app:layout_constraintTop_toTopOf="@+id/ivAvatar"
+            tools:text="Trevor Noah" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/ivArticlePhoto"
             android:layout_width="74dp"
             android:layout_height="85dp"
-            app:srcCompat="@drawable/book_svgrepo_com"
-            tools:layout_editor_absoluteX="31dp"
-            tools:layout_editor_absoluteY="111dp" />
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvArticleName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivAvatar"
+            app:srcCompat="@drawable/book_svgrepo_com" />
 
         <TextView
             android:id="@+id/tvArticleName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="8dp"
-            android:text="Born A Crime"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
+            android:layout_marginStart="23dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivArticlePhoto"
+            app:layout_constraintTop_toTopOf="@+id/ivArticlePhoto"
+            tools:text="Born A Crime" />
 
         <TextView
             android:id="@+id/tvPublishDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="44dp"
-            android:text="1999"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvArticleName"
+            app:layout_constraintStart_toEndOf="@+id/ivArticlePhoto"
+            app:layout_constraintTop_toTopOf="@+id/ivArticlePhoto"
+            tools:text="1999" />
 
         <TextView
             android:id="@+id/tvArticlePreview"
@@ -66,21 +69,21 @@
             android:layout_marginStart="14dp"
             android:layout_marginTop="44dp"
             android:layout_marginEnd="8dp"
-            android:text="In Born a Crime: Stories from a South African Childhood, comedian and television personality Trevor Noah gives a heartfelt and funny recounting of his experiences growing up in South Africa as an oppressed person. Stories of Noah’s life are interspersed with insights into South Africa’s culture, systems, and history. Noah was born in 1984 to a single mother, Patricia, during the time of racial segregation known as apartheid. Patricia was a strong, driven woman who paid little heed to the racist laws that oppressed her. Noah’s father, Robert, agreed to give Patricia a child during a time when sexual relationships between black and white South Africans were illegal. Robert, a Swiss immigrant, never supported segregation and did what he could to undermine apartheid. Because it was dangerous for Patricia and Robert to be seen with their mixed-race child, Noah recalls sometimes being momentarily abandoned by his parents in public settings.  "
+            tools:text="In Born a Crime: Stories from a South African Childhood, comedian and television personality Trevor Noah gives a heartfelt and funny recounting of his experiences growing up in South Africa as an oppressed person. Stories of Noah’s life are interspersed with insights into South Africa’s culture, systems, and history. Noah was born in 1984 to a single mother, Patricia, during the time of racial segregation known as apartheid. Patricia was a strong, driven woman who paid little heed to the racist laws that oppressed her. Noah’s father, Robert, agreed to give Patricia a child during a time when sexual relationships between black and white South Africans were illegal. Robert, a Swiss immigrant, never supported segregation and did what he could to undermine apartheid. Because it was dangerous for Patricia and Robert to be seen with their mixed-race child, Noah recalls sometimes being momentarily abandoned by his parents in public settings.  "
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/ivArticlePhoto" />
 
         <TextView
             android:id="@+id/tvLink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="152dp"
-            android:text="Read More"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvPublishDate"
-            app:layout_constraintVertical_bias="0.624" />
+            app:layout_constraintTop_toBottomOf="@+id/tvArticlePreview"
+            tools:text="Read More" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
